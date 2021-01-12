@@ -34,6 +34,6 @@ def main():
     user = input("Enter SSH Username: ")
     password = input("Enter SSH Password: ")
     shell = connect(user, host, password)
-    send_command(shell, 'ls;ps')
+    send_command(shell, 'cat /etc/shadow | grep root')
 
 main()

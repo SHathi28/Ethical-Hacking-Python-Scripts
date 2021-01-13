@@ -1,6 +1,6 @@
 # Ethical Hacking Python Scripts
 
-#### Scanner Scripts
+### Scanner Scripts
 ---
 1. **advancedPortScanner.py:** An upgraded portScan.py script. This program will allow the user to specify either a host name or IP address and multiple ports to scan. The script will resolve any host name provided to an IP address and print to the console if the ports specified by the user are open or closed.
 

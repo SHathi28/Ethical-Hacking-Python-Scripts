@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# Written By: Sahar Hathiramani
+# Date: 01/13/2021
 
 import hashlib
 

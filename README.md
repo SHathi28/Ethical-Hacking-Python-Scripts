@@ -27,8 +27,12 @@
 ![ftpBrute Screenshot](README_Screenshots/ftpBrute_Screenshot.png)
 
 ## Password Cracking Scripts
-1. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashs of the user specified phrase.\
+1. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashes of the user specified phrase.\
 ![hasher Screenshot](README_Screenshots/hasher_Screenshot.png)
 
-2. **sha1Hash.py**: The script asks for user input of a pre-computer SHA1 hash. The script will compare that has to the SHA1 hashes of the 10,000 most common password. If the password is a match, the script will print the un-hased password to the console.\
+2. **md5Brute.py**: This script will ask the user to input a pre-computed MD5 hash. It will compare the input to the MD5 hashes from the user specified file. If the password is a match, the script will print the un-hashed password to the console.\
+![md5Brute Password](README_Screenshots/md5Brute_Screenshot.png)
+
+3. **sha1Hash.py**: The script will ask the user to input a pre-computed SHA1 hash. It will calculate the SHA1 hashes of the 10,000 more common passwords and compare them to the user inputted hash. If the hashes  match, the script will print the un-hashed password to the console.\
 ![sha1Hash Password](README_Screenshots/sha1hash_Screenshot.png)
+

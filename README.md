@@ -25,3 +25,9 @@
 
 4. **ftpBrute.py:** Reads through the specified username:password file in an attempt to brute force FTP login to the specified host. The username:password file could be used to contain some of the most common passwords or default passwords and after finding a misconfigured target that has FTP (port 20/21) enabled, it would read through the password file and try to connect to the host. If the script finds the correct username:password pair, it'll print the results to the console.\
 ![ftpBrute Screenshot](README_Screenshots/ftpBrute_Screenshot.png)
+
+## Password Cracking Scripts
+1. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashs of the user specified phrase.\
+![hasher Screenshot](README_Screenshots/hasher_Screenshot.png)
+
+

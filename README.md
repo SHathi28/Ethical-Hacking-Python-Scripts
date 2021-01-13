@@ -11,6 +11,6 @@
 
 ---------- SSH / FTP Scripts ----------
 
-1. sshBrute.py: An upgraded sshLogin.py script. This script is designed to all the user to input the a host and username and attempts to SSH into the host and guess the username's password by reading passwords from a file. This file could be used to contain some of the most common password or defualt password used in systems. If the script is able to SSH into the host, it will attempt to print out all the encrypted passwords in the /etc/shadow file.
+1. sshBrute.py: An upgraded sshLogin.py script. This script is designed to all the user to input a host and username and attempts to SSH into the host and guess the username's password by reading passwords from a file. This file could be used to contain some of the most common password or default password used in systems. If the script is able to SSH into the host, it will attempt to print out all the encrypted passwords in the /etc/shadow file.
 
-2. sshLogin.py: This script attempts to SSH into the user inputed host and login in using the user inputted username and password. The script is able to skip the "Are you sure you want to continue connecting" prompt when logging into a new host. If the SSH conenction is succesfull, the script will attempt to print out target's root user's encrypted password from the target's /etc/shadow file. 
+2. sshLogin.py: This script attempts to SSH into the user inputted host and login in using the user inputted username and password. The script is able to skip the "Are you sure you want to continue connecting" prompt when logging into a new host. If the SSH connection is successful, the script will attempt to print out target's root user's encrypted password from the target's /etc/shadow file.

@@ -1,7 +1,6 @@
 # Ethical Hacking Python Scripts
 
 ## Scanner Scripts
----
 1. **advancedPortScanner.py:** An upgraded portScan.py script. This program will allow the user to specify either a host name or IP address and multiple ports to scan. The script will resolve any host name provided to an IP address and print to the console if the ports specified by the user are open or closed.
 ![advancedPortScanner Screenshot](README_Screenshots/advancedPortScanner_Screenshot.png)
 
@@ -15,7 +14,6 @@
 ![vulnerabilityScanner Screenshot](README_Screenshots/vulnerabilityScanner_Screenshot.png)
 
 ## SSH / FTP Scripts
----
 1. **anonymousLogin.py:** This script is designed to attempt an FTP Anonymous Login Attack. This script attempt to anonymously FTP login to the user supplied host. If the target host allows anonymous FTP login, the script print a success message to the console.\
 ![anonymousLogin Screenshot](README_Screenshots/anonymousLogin_Screenshot.png)
 

@@ -10,7 +10,7 @@ PROMPT = ['# ', '>>> ', '> ', '\$ ', '$ ']
 def send_command(connection, command):
     connection.sendline(command)
     connection.expect(PROMPT)
-    print(connection.before)
+    print(connection.before.decode())
 
 def connect(user, host, password):
     ssh_newkey = 'Are you sure you want to continue connecting'

@@ -10,7 +10,7 @@ def returnBanner(ip, port):
         s = socket.socket()
         s.connect((ip,port))
         banner = s.recv(1024)
-        return str(banner)
+        return banner
     except:
         return
 
@@ -19,7 +19,7 @@ def main():
     for port in range(1,100):
         banner = returnBanner(ip, port)
         if banner:
-            print "[*]" + ip + ":" + str(port) + " - " + banner.string('/n')
+            print "[*]" + ip + ":" + str(port) + " - " + banner.strip('\n')
 
 main()
 

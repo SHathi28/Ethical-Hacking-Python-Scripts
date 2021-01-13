@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Written By: Sahar Hathiramani
 # Date: 01/11/2021
 
@@ -9,8 +9,7 @@ PROMPT = ['# ', '>>> ', '> ', '\$ ', '$ ']
 def send_command(connection, command):
     connection.sendline(command)
     connection.expect(PROMPT)
-    print(connection.before)
-
+    print(connection.before.decode())
 
 def connect(user, host, password):
     ssh_newkey = 'Are you sure you want to continue connecting'
@@ -36,6 +35,6 @@ def main():
     user = input("Enter SSH Username: ")
     password = input("Enter SSH Password: ")
     shell = connect(user, host, password)
-    send_command(shell, 'cat /etc/shadow | grep root')
+    send_command(shell, 'cat /etc/shadow | grep root;ps')
 
 main()

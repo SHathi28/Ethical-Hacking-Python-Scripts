@@ -1,0 +1,9 @@
+randomVulnerability1
+SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1 
+randomVulnerability2
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+randomVulnerability3
+randomVulnerability4
+randomVulnerability5
+
+

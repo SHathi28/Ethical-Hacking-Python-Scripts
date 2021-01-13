@@ -30,4 +30,5 @@
 1. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashs of the user specified phrase.\
 ![hasher Screenshot](README_Screenshots/hasher_Screenshot.png)
 
-
+2. **sha1Hash.py**: The script asks for user input of a pre-computer SHA1 hash. The script will compare that has to the SHA1 hashes of the 10,000 most common password. If the password is a match, the script will print the un-hased password to the console.\
+![sha1Hash Password](README_Screenshots/sha1hash_Screenshot.png)

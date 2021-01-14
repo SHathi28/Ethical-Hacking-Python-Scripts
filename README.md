@@ -27,8 +27,8 @@
 ![ftpBrute Screenshot](README_Screenshots/ftpBrute_Screenshot.png)
 
 ## Password Cracking Scripts
-1. **cryptForce.py**: This script attempts to mimic a dictionary attack against salted password. The script starts with grabbing the salt used by the passwords. By using a dictionary text file containing the most commonly used password, the script encrypts the dictionary passwords with the salt and compares them to passwords file which contain the user's pre-computed  salted password. If the computer encrypted password matches the user's password, it prints the result to the console.
-![cryptForce Screenshot](README_Screenshots/cryptoBrute_Screenshot.png)
+1. **cryptForce.py**: This script attempts to mimic a dictionary attack against salted password. The script starts with grabbing the salt used by the passwords. By using a dictionary text file containing the most commonly used password, the script encrypts the dictionary passwords with the salt and compares them to passwords file which contain the user's pre-computed  salted password. If the computer encrypted password matches the user's password, it prints the result to the console.\
+![cryptForce Screenshot](README_Screenshots/cryptForce_Screenshot.png)
 
 2. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashes of the user specified phrase.\
 ![hasher Screenshot](README_Screenshots/hasher_Screenshot.png)

@@ -10,7 +10,7 @@
 3. **retrieveBanner.py:** A python script that scans through the first 100 ports of a host the user inputs and attempts to retrieve the banners from the ports and prints the first 1024 bits of the banner to the console if it exists.\
 ![retrieveBanner Screenshot](README_Screenshots/retrieveBanner_Screenshot.png)
 
-4. **vulnerabilityScanner.py:** An expansion of the retrieveBanner.py. This script will scan multiple hosts rather than a single on and will check some of the most common ports (20/21 - FTP, 22 - SSH/SFTP/SCP, 25 - SMTP, 443 - HTTPS, 3389 - RDP) and retrieve the banners of those ports from each host.\
+4. **vulnerabilityScanner.py:** An expansion of the retrieveBanner.py. This script will scan multiple hosts rather than a single on and will check some of the most common ports (20/21 - FTP, 22 - SSH/SFTP/SCP, 25 - SMTP, 443 - HTTPS, 3389 - RDP) and retrieve the banners of those ports from each host if the port contains a vulnerability.\
 ![vulnerabilityScanner Screenshot](README_Screenshots/vulnerabilityScanner_Screenshot.png)
 
 ## SSH / FTP Scripts

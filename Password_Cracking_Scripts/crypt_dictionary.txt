@@ -1,0 +1,7 @@
+password
+administrator
+Password1
+root
+qwerty
+admin
+admin123

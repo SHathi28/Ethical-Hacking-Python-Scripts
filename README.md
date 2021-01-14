@@ -27,12 +27,15 @@
 ![ftpBrute Screenshot](README_Screenshots/ftpBrute_Screenshot.png)
 
 ## Password Cracking Scripts
-1. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashes of the user specified phrase.\
+1. **cryptForce.py**: This script attempts to mimic a dictionary attack against salted password. The script starts with grabbing the salt used by the passwords. By using a dictionary text file containing the most commonly used password, the script encrypts the dictionary passwords with the salt and compares them to passwords file which contain the user's pre-computed  salted password. If the computer encrypted password matches the user's password, it prints the result to the console.
+![cryptForce Screenshot](README_Screenshots/cryptoBrute_Screenshot.png)
+
+2. **hasher.py**: Simple script that prints out the MD5, SHA1, SHA224. SHA256, and SHA512 hashes of the user specified phrase.\
 ![hasher Screenshot](README_Screenshots/hasher_Screenshot.png)
 
-2. **md5Brute.py**: This script will ask the user to input a pre-computed MD5 hash. It will compare the input to the MD5 hashes from the user specified file. If the password is a match, the script will print the un-hashed password to the console.\
+3. **md5Brute.py**: This script will ask the user to input a pre-computed MD5 hash. It will compare the input to the MD5 hashes from the user specified file. If the password is a match, the script will print the un-hashed password to the console.\
 ![md5Brute Password](README_Screenshots/md5Brute_Screenshot.png)
 
-3. **sha1Hash.py**: The script will ask the user to input a pre-computed SHA1 hash. It will calculate the SHA1 hashes of the 10,000 more common passwords and compare them to the user inputted hash. If the hashes  match, the script will print the un-hashed password to the console.\
+4. **sha1Hash.py**: The script will ask the user to input a pre-computed SHA1 hash. It will calculate the SHA1 hashes of the 10,000 more common passwords and compare them to the user inputted hash. If the hashes  match, the script will print the un-hashed password to the console.\
 ![sha1Hash Password](README_Screenshots/sha1hash_Screenshot.png)
 

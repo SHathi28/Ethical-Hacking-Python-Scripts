@@ -39,3 +39,6 @@
 4. **sha1Hash.py**: The script will ask the user to input a pre-computed SHA1 hash. It will calculate the SHA1 hashes of the 10,000 more common passwords and compare them to the user inputted hash. If the hashes  match, the script will print the un-hashed password to the console.\
 ![sha1Hash Password](README_Screenshots/sha1hash_Screenshot.png)
 
+## Flooder, Sniffer, and Spoofer Scripts
+1. **macChanger**: This Python script is designed to allow a user to change their MAC address of an interface of their choosing. The script will bring down the interface, change the MAC address, then bring the interface back up.\
+![macChange Screenshot](README_Screenshots/macChanger_Screenshot.png) 

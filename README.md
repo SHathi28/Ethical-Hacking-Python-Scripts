@@ -40,7 +40,7 @@
 ![sha1Hash Password](README_Screenshots/sha1hash_Screenshot.png)
 
 ## Flooder, Sniffer, and Spoofer Scripts
-1. **arpSpoofer**: This Python script attempts to spoof ARP packets. The script will get the MAC address of the target IP address and attempt to send a packet from the local machine spoofed as the spoofed IP address.
+1. **arpSpoofer**: This Python script attempts to spoof ARP packets. The script will get the MAC address of the target IP address and attempt to send a packet from the local machine spoofed as the spoofed IP address. If the user interrupts the progarm while it is executing, the script will restore the ARP tables back to their original state.
 
 2. **macChanger**: This Python script is designed to allow a user to change their MAC address of an interface of their choosing. The script will bring down the interface, change the MAC address, then bring the interface back up.\
 ![macChange Screenshot](README_Screenshots/macChanger_Screenshot.png) 

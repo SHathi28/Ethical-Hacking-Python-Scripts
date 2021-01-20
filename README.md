@@ -42,14 +42,14 @@
 ## Flooder, Sniffer, and Spoofer Scripts
 1. **arpSpoofer.py**: This Python script attempts to spoof ARP packets. The script will get the MAC address of the target IP address and attempt to send a packet from the local machine spoofed as the spoofed IP address. If the user interrupts the program while it is executing, the script will restore the ARP tables back to their original state.
 
-2. **macChanger.py**: This Python script is designed to allow a user to change their MAC address of an interface of their choosing. The script will bring down the interface, change the MAC address, then bring the interface back up.\
+2. **ftpSniffer.py**: This Python script is designed to sniff the host machine for any FTP attempts. When a user attempts to FTP onto a server, the script will print to the console the username, password, and IP used for the FTP connection.\
+![ftpSniffer Screenshot](README_Screenshots/ftpSniffer_Screenshot.png)
+
+3. **macChanger.py**: This Python script is designed to allow a user to change their MAC address of an interface of their choosing. The script will bring down the interface, change the MAC address, then bring the interface back up.\
 ![macChange Screenshot](README_Screenshots/macChanger_Screenshot.png)
 
-3. **macSniffer.py**: This Python script is designed to mimic the sniffing capabilities of Wireshark. This script will sniff all packets sent and received by the host machine and will print to the console the packet's destination and source MAC address and protocol being used.\
+4. **macSniffer.py**: This Python script is designed to mimic the sniffing capabilities of Wireshark. This script will sniff all packets sent and received by the host machine and will print to the console the packet's destination and source MAC address and protocol being used.\
 ![macSniffer Screenshot](README_Screenshots/macSniffer_Screenshot.png)
-
-4. **ftpSniffer.py**: This Python script is designed to sniff the host machine for any FTP attempts. When a user attempts to FTP onto a server, the script will print to the console the username, password, and IP used for the FTP connection.\
-![ftpSniffer Screenshot](README_Screenshots/ftpSniffer_Screenshot.png)
 
 5. **synFlooder.py**: This Python script will attempt a SYN Flood attack. The script will consistently send packets to the destination IP address and port specified by the user, masquerading as an IP address different than the machine that is running the program. For example, this script can be used to block port 80 on the target, resulting in the target being unable to/slowly able to access the internet.\
 ![synFlooder Screenshot](README_Screenshots/synFlooder_Screenshot.png)

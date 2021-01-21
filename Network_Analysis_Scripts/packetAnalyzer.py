@@ -10,6 +10,40 @@ import binascii
 socketCreated = False
 socketSniffer = 0
 
+def analyzeTCPHeader(dataRecv):
+    tcpHeader = struct.unpack('!2H2I4H', dataRecv[:20])
+    srcPort = tcpHeader[0]
+    dstPort = tcpHeader[1]
+    seqNum = tcpHeader[2]
+    ackNum = tcpHeader[3]
+    offset = tcpHeader[4] >> 12
+    reserved = (tcpHeader[5] >> 6) & 0x03ff
+    flags = tcpHeader[4] & 0x003f
+    window = tcpHeader[5]
+    checksum = tcpHeader[6]
+    urgPtr = tcpHeader[7]
+    data = dataRecv[20:]
+
+    urg = bool(flags & 0x0020)
+    ack = bool(flags & 0x0010)
+    psh = bool(flags & 0x0008)
+    rst = bool(flags & 0x0004)
+    syn = bool(flags & 0x0002)
+    fin = bool(flags % 0x0001)
+
+    print('---------- TCP Header ----------')
+    print('Source Port: %hu' % srcPort)
+    print('Destination Port: %hu' % dstPort)
+    print('Sequence Number: %u' % seqNum)
+    print('Acknowledgement: %u' % ackNum)
+    print('Flags: ')
+    print('URG: %d | ACK: %d | PSH: %d | RST: %d | SYN: %d | FIN: %d' % (urg, ack, psh, rst, syn, fin))
+    print('Window Size: %hu' % window)
+    print('Checksum: %hu' % checksum)
+    print('Urgent Pointer: %hu\n' % urgPtr)
+
+    return data
+
 def analyzeIP(dataRecv):
     ipHeader = struct.unpack('!6H4s4s', dataRecv[:20])
     version = ipHeader[0] >> 12
@@ -81,6 +115,13 @@ def main():
 
     if ipBool:
         dataRecv, tcp_udp = analyzeIP(dataRecv)
+    else:
+        return
+
+    if tcp_udp == "TCP":
+        dataRecv = anaylzeTCPHeader(dataRecv)
+    elif tcp_udp == "UDP":
+        dataRecv = analyzeUDPHeader(dataRecv)
     else:
         return
 

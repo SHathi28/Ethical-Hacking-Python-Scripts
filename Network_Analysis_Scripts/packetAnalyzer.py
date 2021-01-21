@@ -53,7 +53,7 @@ def analyzeTCPHeader(dataRecv):
     print('Sequence Number: %u' % seqNum)
     print('Acknowledgement: %u' % ackNum)
     print('Flags: ')
-    print('URG: %d | ACK: %d | PSH: %d | RST: %d | SYN: %d | FIN: %d' % (urg, ack, psh, rst, syn, fin))
+    print('    URG: %d | ACK: %d | PSH: %d | RST: %d | SYN: %d | FIN: %d' % (urg, ack, psh, rst, syn, fin))
     print('Window Size: %hu' % window)
     print('Checksum: %hu' % checksum)
     print('Urgent Pointer: %hu\n' % urgPtr)

@@ -60,5 +60,5 @@
 
 ## Network Analysis Scripts
 1. **packetAnalyzer.py**: This Python program will analyze each packet received by the host machine and print out the contents of its Ethernet, IP, and TCP/UDP headers to the console. The script will differentiate the packet's protocol as either TCP or UDP and print their respective headers to the console.\
-![packetAnalyzer Screenshot 1](README_Screenshots/packetAnalyzer_Screenshot1.png)
-![packetAnalyzer Screenshot 2](README_Screenshots/pacektAnalyzer_Screenshot2.png)
+![packetAnalyzer Screenshot 1](README_Screenshots/packetAnalyzer_Screenshot1.png)\
+![packetAnalyzer Screenshot 2](README_Screenshots/packetAnalyzer_Screenshot2.png)

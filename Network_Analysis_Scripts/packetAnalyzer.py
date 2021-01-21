@@ -10,6 +10,44 @@ import binascii
 socketCreated = False
 socketSniffer = 0
 
+def analyzeIP(dataRecv):
+    ipHeader = struct.unpack('!6H4s4s', dataRecv[:20])
+    version = ipHeader[0] >> 12
+    ihl = (ipHeader[0] >> 8) & 0x0f
+    tos = ipHeader[0] & 0x00ff
+    totalLength = ipHeader[1]
+    ipID = ipHeader[2]
+    flags = ipHeader[3] >> 13
+    fragOffset = ipHeader[3] & 0x1fff
+    ipTTL = ipHeader[4] >> 8
+    ipProtocol = ipHeader[4] & 0x00ff
+    checksum = ipHeader[5]
+    srcAddr = socket.inet_ntoa(ipHeader[6])
+    dstAddr = socket.inet_ntoa(ipHeader[7])
+    data = dataRecv[20:]
+    print('---------- IP HEADER ----------')
+    print('Version: %hu' % version)
+    print('IHL: %hu' % ihl)
+    print('TOS: %hu' % tos)
+    print('Length: %hu' % totalLength)
+    print('ID: %hu' % ipID)
+    print('Offset: %hu' % fragOffset)
+    print('TTL: %hu' % ipTTL)
+    print('Protocol: %hu' % ipProtocol)
+    print('Checksum: %hu' % checksum)
+    print('Source IP: %s' % srcAddr)
+    print('Destination IP: %s\n' % dstAddr)
+
+    if ipProtocol == 6:
+        tcp_udp = "TCP"
+    elif ipProtocol == 17:
+        tcp_udp = "UDP"
+    else:
+        tcp_udp = "Other"
+
+    return data, tcp_udp
+
+
 def analyzeEtherHeader(dataRecv):
     ipBool = False
     etherHeader = struct.unpack('!6s6sH',dataRecv[:14])
@@ -40,6 +78,11 @@ def main():
     os.system('clear')
 
     dataRecv, ipBool = analyzeEtherHeader(dataRecv)
+
+    if ipBool:
+        dataRecv, tcp_udp = analyzeIP(dataRecv)
+    else:
+        return
 
 while True:
     main()

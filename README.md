@@ -57,3 +57,8 @@
 
 6. **synFlooder.py**: This Python script will attempt a SYN Flood attack. The script will consistently send packets to the destination IP address and port specified by the user, masquerading as an IP address different than the machine that is running the program. For example, this script can be used to block port 80 on the target, resulting in the target being unable to/slowly able to access the internet.\
 ![synFlooder Screenshot](README_Screenshots/synFlooder_Screenshot.png)
+
+## Network Analysis Scripts
+1. **packetAnalyzer.py**: This Python program will analyze each packet received by the host machine and print out the contents of its Ethernet, IP, and TCP/UDP headers to the console. The script will differentiate the packet's protocol as either TCP or UDP and print their respective headers to the console.\
+![packetAnalyzer Screenshot 1](README_Screenshots/packetAnalyzer_Screenshot1.png)
+![packetAnalyzer Screenshot 2](README_Screenshots/pacektAnalyzer_Screenshot2.png)

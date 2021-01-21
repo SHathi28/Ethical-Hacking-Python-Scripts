@@ -10,6 +10,22 @@ import binascii
 socketCreated = False
 socketSniffer = 0
 
+def analyzeUDPHeader(dataRecv):
+    udpHeader = struct.unpack('!4H', dataRecv[:8])
+    srcPort = udpHeader[0]
+    dstPort = udpHeader[1]
+    length = udpHeader[2]
+    checksum = udpHeader[3]
+    data = dataRecv[8:]
+
+    print('---------- UDP HEADER ----------')
+    print('Source Port: %hu' % srcPort)
+    print('Destination Port: %hu' % dstPort)
+    print('Length: %hu' % length)
+    print('Checksum: %hu\n' % checksum)
+
+    return data
+    
 def analyzeTCPHeader(dataRecv):
     tcpHeader = struct.unpack('!2H2I4H', dataRecv[:20])
     srcPort = tcpHeader[0]
@@ -31,7 +47,7 @@ def analyzeTCPHeader(dataRecv):
     syn = bool(flags & 0x0002)
     fin = bool(flags % 0x0001)
 
-    print('---------- TCP Header ----------')
+    print('---------- TCP HEADER ----------')
     print('Source Port: %hu' % srcPort)
     print('Destination Port: %hu' % dstPort)
     print('Sequence Number: %u' % seqNum)
@@ -59,6 +75,7 @@ def analyzeIP(dataRecv):
     srcAddr = socket.inet_ntoa(ipHeader[6])
     dstAddr = socket.inet_ntoa(ipHeader[7])
     data = dataRecv[20:]
+
     print('---------- IP HEADER ----------')
     print('Version: %hu' % version)
     print('IHL: %hu' % ihl)
@@ -119,7 +136,7 @@ def main():
         return
 
     if tcp_udp == "TCP":
-        dataRecv = anaylzeTCPHeader(dataRecv)
+        dataRecv = analyzeTCPHeader(dataRecv)
     elif tcp_udp == "UDP":
         dataRecv = analyzeUDPHeader(dataRecv)
     else:

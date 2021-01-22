@@ -65,7 +65,7 @@
 
 ## Reverse Shell Scripts
 1. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
-![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)\
+![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)
 
    **server.py v1.1**: Upgrade of the script. Allows the script to connect to a remore system (in this case it's the local machine) and send and receive messages between the two programs.
 ![reverseShell Screenshot 2](README_Screenshots/reverseShell_Screenshot2.png)

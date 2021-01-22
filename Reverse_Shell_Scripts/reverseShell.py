@@ -6,7 +6,7 @@ import socket
 
 def shell():
     command = sock.recv(1024)
-    message = "Hello, World!"
+    message = "You have successfully retrieved this message"
     sock.send(message.encode())
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

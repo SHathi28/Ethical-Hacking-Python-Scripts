@@ -73,4 +73,7 @@
    **server.py v1.2**: Allows the script to now continuously execute commands on the remote system and print the results to the console.\
 ![reverseShell Screenshot 3](README_Screenshots/reverseShell_Screenshot3.png)
 
+   **server.py v1.3**: Increase the amount of data the server is able to receive and parse from the remote system utilizing the JSON library.\
+![reverseShell Screenshot 4](README_Screenshots/reverseShell_Screenshot4.png)
+
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

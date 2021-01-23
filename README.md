@@ -73,4 +73,4 @@
    **server.py v1.2**: Allows the script to now continuously execute commands on the remote system and print the results to the console.\
 ![reverseShell Screenshot 3](README_Screenshots/reverseShell_Screenshot3.png)
 
-2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting for command to execute and send back.
+2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

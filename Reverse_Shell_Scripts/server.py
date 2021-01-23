@@ -10,7 +10,7 @@ def shell():
     while True:
         command = input("Shell#~%s: " % str(ip))
         target.send(command.encode())
-        if command == ':q':
+        if command == 'exit':
             break
         else:
             result = target.recv(1024)

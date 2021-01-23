@@ -67,10 +67,10 @@
 1. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
 ![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)
 
-   **server.py v1.1**: Upgrade of the script. Allows the script to connect to a remore system (in this case it's the local machine) and send and receive messages between the two programs.
+   **server.py v1.1**: Upgrade of the script. Allows the script to connect to a remote system (in this case it's the local machine) and send and receive messages between the two programs.\
 ![reverseShell Screenshot 2](README_Screenshots/reverseShell_Screenshot2.png)
 
-   **server.py v1.2**: Allows the script to now continusouly execute commands on the remote system and print the results to the console.
+   **server.py v1.2**: Allows the script to now continuously execute commands on the remote system and print the results to the console.\
 ![reverseShell Screenshot 3](README_Screenshots/reverseShell_Screenshot3.png)
 
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting for command to execute and send back.

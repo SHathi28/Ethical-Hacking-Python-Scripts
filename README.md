@@ -85,7 +85,7 @@
    **server.py v1.6**: Allow the reverseShell.py script have persistence storage on target and masquerade itself in the Registry when running.\
 ![reverseShell Screenshot 7](README_Screenshots/reverseShell_Screenshot7.png)
 
-   **server.pt v1.7**: Everytime it's  run, the reverse shell/backdoor program, will continuously try to establish a connection with the server. If it is unable to connect, it will wait 5 seconds before attempting to re-connect.\
+   **server.py v1.7**: Everytime it's  run, the reverse shell/backdoor program, will continuously try to establish a connection with the server. If it is unable to connect, it will wait 5 seconds before attempting to re-connect.\
 ![reverseShell Screenshot 8](README_Screenshots/reverseShell_Screenshot8.png)
 
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

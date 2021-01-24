@@ -95,4 +95,6 @@
    **server.py v2.0**: Implement multiple new functions. Added the ability to download files to that target PC, capture screeenshots of the target's monitor, check if the user has admin privileges on the target, allow the user to start programs on the target, and start and dump the contents of a keylogger. Below is an example of the newly added help section and the user checking if they have admin privileges./
 ![reverseShell Screenshot 9](README_Screenshots/reverseShell_Screenshot9.png)
 
-4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.
+4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.\
+![threaded Screenshot 1](README_Screenshots/threaded_Screenshot1.png)
+![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)

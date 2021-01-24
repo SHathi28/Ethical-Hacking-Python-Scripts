@@ -66,7 +66,9 @@
 ## Reverse Shell Scripts
 1. **keylogger.py**: A simple keylogger that can be run on the target machine to record all the keystrokes the target types while using the target machine.
 
-2. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
+2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.
+
+3. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
 ![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)
 
    **server.py v1.1**: Upgrade of the script. Allows the script to connect to a remote system (in this case it's the local machine) and send and receive messages between the two programs.\
@@ -92,7 +94,5 @@
 
    **server.py v2.0**: Implement multiple new functions. Added the ability to download files to that target PC, capture screeenshots of the target's monitor, check if the user has admin privileges on the target, allow the user to start programs on the target, and start and dump the contents of a keylogger. Below is an example of the newly added help section and the user checking if they have admin privileges./
 ![reverseShell Screenshot 9](README_Screenshots/reverseShell_Screenshot9.png)
-
-2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.
 
 4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.

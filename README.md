@@ -82,4 +82,7 @@
    **server.py v1.5**: Allow the server to upload (work in progress) and download (completed) files from the target machines. Pictured below is the download function.\
 ![reverseShell Screenshot 6](README_Screenshots/reverseShell_Screenshot6.png)
 
+   **server.py v1.6**: Allow the reverseShell.py script have persistence storage on target and masquerade itself in the Registry when running.\
+![reverseShell Screenshot 7](README_Screenshots/reverseShell_Screenshot7.png)
+
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

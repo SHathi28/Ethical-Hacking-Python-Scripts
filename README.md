@@ -64,7 +64,9 @@
 ![packetAnalyzer Screenshot 2](README_Screenshots/packetAnalyzer_Screenshot2.png)
 
 ## Reverse Shell Scripts
-1. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
+1. 
+
+2. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
 ![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)
 
    **server.py v1.1**: Upgrade of the script. Allows the script to connect to a remote system (in this case it's the local machine) and send and receive messages between the two programs.\
@@ -87,5 +89,8 @@
 
    **server.py v1.7**: Everytime it's  run, the reverse shell/backdoor program, will continuously try to establish a connection with the server. If it is unable to connect, it will wait 5 seconds before attempting to re-connect.\
 ![reverseShell Screenshot 8](README_Screenshots/reverseShell_Screenshot8.png)
+
+   **server.py v2.0**: Implement multiple new functions. Added the ability to download files to that target PC, capture screeenshots of the target's monitor, check if the user has admin privileges on the target, allow the user to start programs on the target, and start and dump the contents of a keylogger. Below is an example of the newly added help section and the user checking if they have admin privileges./
+![reverseShell Screenshot 9](README_Screenshots/reverseShell_Screenshot9.png)
 
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

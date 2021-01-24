@@ -94,3 +94,5 @@
 ![reverseShell Screenshot 9](README_Screenshots/reverseShell_Screenshot9.png)
 
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.
+
+4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.

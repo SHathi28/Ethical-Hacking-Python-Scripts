@@ -77,6 +77,6 @@
 ![reverseShell Screenshot 4](README_Screenshots/reverseShell_Screenshot4.png)
 
    **server.py v1.4**: Add directory traversal functionality to the script to allow the host to navigate through the target's file system.\
-![reverseShell Screenshot 5](README_Screenshiots/reverseShell_Screenshot5.png)
+![reverseShell Screenshot 5](README_Screenshots/reverseShell_Screenshot5.png)
 
 2. **reverseShell.py**: Works in conjunction with server.py. This script is designed to be placed on the target machine and establish a connection with the command system, waiting to receive commands to execute and send back.

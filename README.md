@@ -64,7 +64,7 @@
 ![packetAnalyzer Screenshot 2](README_Screenshots/packetAnalyzer_Screenshot2.png)
 
 ## Reverse Shell Scripts
-1. 
+1. **keylogger.py**: A simple keylogger that can be run on the target machine to record all the keystrokes the target types while using the target machine.
 
 2. **server.py v1.0**: A simple Python script designed to listen for incoming connections on the host machine.\
 ![reverseShell Screenshot 1](README_Screenshots/reverseShell_Screenshot1.png)

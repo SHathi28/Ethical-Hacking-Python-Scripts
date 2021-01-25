@@ -100,13 +100,17 @@
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)
 
 ## Web Penetration Testing Scripts
-1. **bruteforcer.py**: Python script that attempts to bruteforce login into the the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
+1. **baseDigestAuth.py**: Attempts to brute force login to the specified URL and using the specified password list. This script will utilize multi-threading to run efficiently.\
+![baseDigestAuth Screenshot](README_Screenshots/baseDigestAuth_Screenshot.png)
+
+
+2. **bruteforcer.py**: Python script that attempts to bruteforce login into the the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
 ![bruteforcer Screenshot](README_Screenshots/bruteforcer_Screenshot.png)
 
-2. **directoryDiscover.py**: Designed to look for hidden directories on a site specified by the user.\
+3. **directoryDiscover.py**: Designed to look for hidden directories on a site specified by the user.\
 ![directoryDiscover Screenshot](README_Screenshots/directoryDiscover_Screenshot.png)
 
-3. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
+4. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
 ![gmailBruteforce Screenshot](README_Screenshots/gmailBruteforce_Screenshot.png)
 
-4. **wifiStealer.py**: A simple Python script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.
+5. **wifiStealer.py**: A simple Python script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.

@@ -103,8 +103,8 @@
 1. **bruteforcer.py**: Python script that attempts to bruteforce login into the the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
 ![bruteforcer Screenshot](README_Screenshots/bruteforcer_Screenshot.png)
 
-2. **directoryDiscover.py**: Designed to look for hidden directories on a site specified by the user.
-![directoryDiscover Screenshot](README_Screenshots/directoryDiscover.png)
+2. **directoryDiscover.py**: Designed to look for hidden directories on a site specified by the user.\
+![directoryDiscover Screenshot](README_Screenshots/directoryDiscover_Screenshot.png)
 
 3. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
 ![gmailBruteforce Screenshot](README_Screenshots/gmailBruteforce_Screenshot.png)

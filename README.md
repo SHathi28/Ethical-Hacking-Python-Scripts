@@ -100,4 +100,7 @@
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)
 
 ## Web Penetration Testing Scripts
-1. **wifiStealer.py**: A simple Pythong script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.
+1. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
+![gmailBruteforce Screenshot](README_Screenshots/gmailBruteforce_Screenshot.png)
+
+2. **wifiStealer.py**: A simple Python script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.

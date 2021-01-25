@@ -98,3 +98,6 @@
 4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.\
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot1.png)
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)
+
+## Web Penetration Testing Scripts
+1. **wifiStealer.py**: A simple Pythong script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.

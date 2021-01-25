@@ -89,13 +89,13 @@
    **server.py v1.6**: Allow the reverseShell.py script have persistence storage on target and masquerade itself in the Registry when running.\
 ![reverseShell Screenshot 7](README_Screenshots/reverseShell_Screenshot7.png)
 
-   **server.py v1.7**: Everytime it's  run, the reverse shell/backdoor program, will continuously try to establish a connection with the server. If it is unable to connect, it will wait 5 seconds before attempting to re-connect.\
+   **server.py v1.7**: Every time it's  run, the reverse shell/backdoor program, will continuously try to establish a connection with the server. If it is unable to connect, it will wait 5 seconds before attempting to re-connect.\
 ![reverseShell Screenshot 8](README_Screenshots/reverseShell_Screenshot8.png)
 
-   **server.py v2.0**: Implement multiple new functions. Added the ability to download files to that target PC, capture screeenshots of the target's monitor, check if the user has admin privileges on the target, allow the user to start programs on the target, and start and dump the contents of a keylogger. Below is an example of the newly added help section and the user checking if they have admin privileges./
+   **server.py v2.0**: Implement multiple new functions. Added the ability to download files to that target PC, capture screenshots of the target's monitor, check if the user has admin privileges on the target, allow the user to start programs on the target, and start and dump the contents of a keylogger. Below is an example of the newly added help section and the user checking if they have admin privileges./
 ![reverseShell Screenshot 9](README_Screenshots/reverseShell_Screenshot9.png)
 
-4. **threaded.py**: An extension of the server.py file that acts as a Command and Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.\
+4. **threaded.py**: An extension of the server.py file that acts as a Command-and-Control Center that can connect to multiple target machines and execute commands on them individually or execute commands on all the machines at once.\
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot1.png)
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)
 
@@ -104,13 +104,13 @@
 ![baseDigestAuth Screenshot](README_Screenshots/baseDigestAuth_Screenshot.png)
 
 
-2. **bruteforcer.py**: Python script that attempts to bruteforce login into the the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
+2. **bruteforcer.py**: Python script that attempts to brute force login into the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
 ![bruteforcer Screenshot](README_Screenshots/bruteforcer_Screenshot.png)
 
 3. **directoryDiscover.py**: Designed to look for hidden directories on a site specified by the user.\
 ![directoryDiscover Screenshot](README_Screenshots/directoryDiscover_Screenshot.png)
 
-4. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
+4. **gmailBruteforce.py**: A simple Python script that attempts to brute force login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
 ![gmailBruteforce Screenshot](README_Screenshots/gmailBruteforce_Screenshot.png)
 
 5. **wifiStealer.py**: A simple Python script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.

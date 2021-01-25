@@ -100,7 +100,10 @@
 ![threaded Screenshot 1](README_Screenshots/threaded_Screenshot2.png)
 
 ## Web Penetration Testing Scripts
-1. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
+1. **bruteforcer.py**: Python script that attempts to bruteforce login into the the URL specified in the script. If the username and password combination is found, it will be printed to the console. This script can be used to attempt to login into different types of login pages.\
+![bruteforcer Screenshot](README_Screenshots/bruteforcer_Screenshot.png)
+
+2. **gmailBruteforce.py**: A simple Python script that attempts to bruteforce login into the user specified Gmail account. The program will print to the console if the login attempt was successful or not.\
 ![gmailBruteforce Screenshot](README_Screenshots/gmailBruteforce_Screenshot.png)
 
 2. **wifiStealer.py**: A simple Python script that attempts to retrieve the plaintext passwords of all Wi-Fi networks on the host. The script will then attempt to email the passwords to an email the user can specify and will save the output to a file.

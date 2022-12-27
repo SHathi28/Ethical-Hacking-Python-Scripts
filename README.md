@@ -1,4 +1,4 @@
-# Ethical Hacking Python Scripts
+# Ethical Hacking Python Scripts 
 
 ## Flooder, Sniffer, and Spoofer Scripts
 1. **arpSpoofer.py**: This Python script attempts to spoof ARP packets. The script will get the MAC address of the target IP address and attempt to send a packet from the local machine spoofed as the spoofed IP address. If the user interrupts the program while it is executing, the script will restore the ARP tables back to their original state.
